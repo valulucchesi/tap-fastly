@@ -109,7 +109,7 @@ class FastlySync:
         stream = "stats"
         loop = asyncio.get_running_loop()
 
-        singer.write_schema(stream, schema.to_dict(), ["status"])
+        singer.write_schema(stream, schema.to_dict(), ["service_id", "start_time"])
         result = await loop.run_in_executor(None, self.client.stats)
         if result:
             for n in result['data']:
