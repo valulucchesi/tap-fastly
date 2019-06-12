@@ -31,7 +31,7 @@
       "regions":{  
          "type":[  
             "null",
-            "object"
+            "string"
          ],
          "properties":{  
 

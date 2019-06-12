@@ -50,9 +50,12 @@ class FastlyClient:
         except:
             return None
 
-    def stats(self):
+    def stats(self, at, params=None):
         try:
-            return self._get(f"stats")
+            if at is not None:
+                return self._get(f"stats"/{at})
+            else:
+                return self._get(f"stats")
         except:
             return None
 
@@ -101,6 +104,9 @@ class FastlySync:
             result = await loop.run_in_executor(None, self.client.bill, at)
 
             if result:
+                result["line_items"]= json.dumps(result["line_items"])
+                result["regions"]= json.dumps(result["regions"])
+                result["total_extras"]= json.dumps(result["total"]["extras"])
                 singer.write_record(stream, result)
                 self.state = write_bookmark(self.state, stream, "start_time", result["end_time"])
 
@@ -110,13 +116,14 @@ class FastlySync:
         loop = asyncio.get_running_loop()
 
         singer.write_schema(stream, schema.to_dict(), ["service_id", "start_time"])
-        result = await loop.run_in_executor(None, self.client.stats)
+        start = get_bookmark(self.state, stream, "from")
+        result = await loop.run_in_executor(None, self.client.stats, start)
         if result:
             for n in result['data']:
                 service_result = await loop.run_in_executor(None, self.client.service, n)
                 for i in result['data'][n]:
                     i['service_name'] = service_result['name']
-                    i['service_versions'] = service_result['versions']
+                    i['service_versions'] = json.dumps(service_result['versions'])
                     i['service_customer_id'] = service_result['customer_id']
                     i['service_publish_key'] = service_result['publish_key']
                     i['service_comment'] = service_result['comment']
@@ -124,3 +131,4 @@ class FastlySync:
                     i['service_updated_at'] = service_result['updated_at']
                     i['service_created_at'] = service_result['created_at']
                     singer.write_record(stream, i)
+                    self.state = write_bookmark(self.state, stream, "from", result['meta']["to"])

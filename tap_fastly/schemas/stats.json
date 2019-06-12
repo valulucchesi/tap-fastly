@@ -580,7 +580,7 @@
     "service_versions":{
       "type":[
         "null",
-        "object"
+        "string"
       ]
     },
     "service_customer_id":{
