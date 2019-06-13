@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6078c44a-cf26-471f-a757-1fedddbe4320" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/tap_fastly/sync.py" beforeDir="false" afterPath="$PROJECT_DIR$/tap_fastly/sync.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tap_fastly/schemas/bills.json" beforeDir="false" afterPath="$PROJECT_DIR$/tap_fastly/schemas/bills.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tap_fastly/sync.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="104" column="22" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
+            <state relative-caret-position="290">
+              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -95,11 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tap_fastly/schemas/bills.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+            <state relative-caret-position="76">
+              <caret line="494" column="26" lean-forward="true" selection-start-line="494" selection-start-column="26" selection-end-line="494" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -132,9 +132,9 @@
       <find>invoice</find>
       <find>extras</find>
       <find>lin</find>
-      <find>line</find>
       <find>line_ite</find>
       <find>invoi</find>
+      <find>line</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -151,8 +151,8 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/tap_fastly/__init__.py" />
         <option value="$PROJECT_DIR$/tap_fastly/schemas/stats.json" />
-        <option value="$PROJECT_DIR$/tap_fastly/schemas/bills.json" />
         <option value="$PROJECT_DIR$/tap_fastly/sync.py" />
+        <option value="$PROJECT_DIR$/tap_fastly/schemas/bills.json" />
       </list>
     </option>
   </component>
@@ -226,7 +226,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tap_fastly/__init__.py" />
-      <option name="PARAMETERS" value="-c $USER_HOME$/analytics/config-fastly.json --catalog $USER_HOME$/analytics/fastly-properties.json" />
+      <option name="PARAMETERS" value="-c $USER_HOME$/analytics/config-fastly.json --catalog $PROJECT_DIR$/../automation-data-warehouse/fastly-properties.json" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -297,8 +297,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.42645383" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.22462942" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4686431" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.65222347" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3291714" />
@@ -569,23 +569,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tap_fastly/schemas/bills.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python3.7/site-packages/requests/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tap_fastly/sync.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="104" column="22" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
+        <state relative-caret-position="290">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tap_fastly/schemas/bills.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="494" column="26" lean-forward="true" selection-start-line="494" selection-start-column="26" selection-end-line="494" selection-end-column="26" />
         </state>
       </provider>
     </entry>
