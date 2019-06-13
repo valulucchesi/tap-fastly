@@ -30,7 +30,7 @@
                },
                "invoice_id":{
                   "type":[
-                     "string"
+                     "integer"
                   ]
                },
                "regions":{

@@ -98,8 +98,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tap_fastly/schemas/bills.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="494" column="26" lean-forward="true" selection-start-line="494" selection-start-column="26" selection-end-line="494" selection-end-column="26" />
+            <state relative-caret-position="106">
+              <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -135,6 +135,8 @@
       <find>line_ite</find>
       <find>invoi</find>
       <find>line</find>
+      <find>invoice_id</find>
+      <find>&quot;invoice_id</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -584,8 +586,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tap_fastly/schemas/bills.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="494" column="26" lean-forward="true" selection-start-line="494" selection-start-column="26" selection-end-line="494" selection-end-column="26" />
+        <state relative-caret-position="106">
+          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
         </state>
       </provider>
     </entry>
