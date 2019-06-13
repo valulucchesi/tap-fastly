@@ -90,7 +90,7 @@ class FastlySync:
     async def sync_bills(self, schema, period: pendulum.period = None):
         """Output the `bills` in the period."""
         stream = "bills"
-        loop = asyncio.get_running_loop()
+        loop = asyncio.get_event_loop()
 
         if not period:
             # build a default period from the last bookmark
@@ -113,7 +113,7 @@ class FastlySync:
     async def sync_stats(self, schema, period:pendulum.period = None):
         """Output the stats in the period."""
         stream = "stats"
-        loop = asyncio.get_running_loop()
+        loop = asyncio.get_event_loop()
 
         singer.write_schema(stream, schema.to_dict(), ["service_id", "start_time"])
         start = get_bookmark(self.state, stream, "from")
