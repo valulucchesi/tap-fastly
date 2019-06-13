@@ -102,11 +102,14 @@ class FastlySync:
 
         for at in period.range("months"):
             result = await loop.run_in_executor(None, self.client.bill, at)
-
             if result:
-                result["line_items"]= json.dumps(result["line_items"])
-                result["regions"]= json.dumps(result["regions"])
-                result["total_extras"]= json.dumps(result["total"]["extras"])
+                response = result.copy()
+                if response["line_items"]:
+                    result["line_items"] = json.dumps(response["line_items"])
+                if response["regions"]:
+                    result["regions"] = json.dumps(response["regions"])
+                if response["total"]["extras"]:
+                    result["total_extras"] = json.dumps(response["total"]["extras"])
                 singer.write_record(stream, result)
                 self.state = write_bookmark(self.state, stream, "start_time", result["end_time"])
 
