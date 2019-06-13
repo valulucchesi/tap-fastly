@@ -104,6 +104,7 @@ class FastlySync:
             result = await loop.run_in_executor(None, self.client.bill, at)
             if result:
                 response = result.copy()
+                print(response)
                 if response['line_items']:
                     result['line_items'] = json.dumps(response['line_items'])
                 if response['regions']:
