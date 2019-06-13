@@ -32,10 +32,7 @@
          "type":[  
             "null",
             "string"
-         ],
-         "properties":{  
-
-         }
+         ]
       },
       "status":{  
          "type":[  
@@ -150,7 +147,7 @@
             "extras":{  
                "type":[  
                   "null",
-                  "array"
+                  "string"
                ],
                "items":{  
                   "type":"object",
@@ -164,7 +161,7 @@
       "line_items":{  
          "type":[  
             "null",
-            "array"
+            "string"
          ],
          "items":{  
             "type":[  
