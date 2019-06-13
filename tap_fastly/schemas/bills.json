@@ -148,13 +148,7 @@
                "type":[  
                   "null",
                   "string"
-               ],
-               "items":{  
-                  "type":"object",
-                  "properties":{  
-
-                  }
-               }
+               ]
             }
          }
       },
@@ -162,138 +156,7 @@
          "type":[  
             "null",
             "string"
-         ],
-         "items":{  
-            "type":[  
-               "null",
-               "object"
-            ],
-            "properties":{  
-               "id":{  
-                  "type":[  
-                     "null",
-                     "string"
-                  ]
-               },
-               "aria_invoice_id":{  
-                  "type":[  
-                     "null",
-                     "string"
-                  ]
-               },
-               "line_number":{  
-                  "type":[  
-                     "null",
-                     "integer"
-                  ]
-               },
-               "description":{  
-                  "type":[  
-                     "null",
-                     "string"
-                  ]
-               },
-               "service_no":{  
-                  "type":[  
-                     "null",
-                     "integer"
-                  ]
-               },
-               "service_name":{  
-                  "type":[  
-                     "null",
-                     "string"
-                  ]
-               },
-               "units":{  
-                  "type":[  
-                     "null",
-                     "string"
-                  ]
-               },
-               "rate_per_unit":{  
-                  "type":[  
-                     "null",
-                     "string"
-                  ]
-               },
-               "amount":{  
-                  "type":[  
-                     "null",
-                     "string"
-                  ]
-               },
-               "rate_schedule_no":{  
-                  "type":[  
-                     "null",
-                     "integer"
-                  ]
-               },
-               "rate_schedule_tier_no":{  
-                  "type":[  
-                     "null",
-                     "integer"
-                  ]
-               },
-               "usage_type_no":{  
-                  "type":[  
-                     "null",
-                     "integer"
-                  ]
-               },
-               "usage_type_cd":{  
-                  "type":[  
-                     "null",
-                     "string"
-                  ]
-               },
-               "plan_no":{  
-                  "type":[  
-                     "null",
-                     "integer"
-                  ]
-               },
-               "plan_name":{  
-                  "type":[  
-                     "null",
-                     "string"
-                  ]
-               },
-               "client_service_id":{  
-                  "type":[  
-                     "null",
-                     "string"
-                  ]
-               },
-               "credit_coupon_code":{  
-                  "type":[  
-                     "null",
-                     "string"
-                  ]
-               },
-               "created_at":{  
-                  "type":[  
-                     "null",
-                     "string"
-                  ],
-                  "format":"date-time"
-               },
-               "updated_at":{  
-                  "type":[  
-                     "null",
-                     "string"
-                  ],
-                  "format":"date-time"
-               },
-               "deleted_at":{  
-                  "type":[  
-                     "null",
-                     "string"
-                  ],
-                  "format":"date-time"
-               }
-            }
-         }
+         ]
       }
    }
 }
