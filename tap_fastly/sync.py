@@ -50,10 +50,10 @@ class FastlyClient:
         except:
             return None
 
-    def stats(self, at, params=None):
+    def stats(self, start_date, end_date, params=None):
         try:
-            if at is not None:
-                return self._get(f"stats"/{at})
+            if start_date is not None:
+                return self._get(f"stats?from={start_date}&to={end_date}")
             else:
                 return self._get(f"stats")
         except:
@@ -66,9 +66,10 @@ class FastlyClient:
             return None
 
 class FastlySync:
-    def __init__(self, client: FastlyClient, state={}):
+    def __init__(self, client: FastlyClient, state={}, config={}):
         self._client = client
         self._state = state
+        self._config = config
 
     @property
     def client(self):
@@ -112,8 +113,13 @@ class FastlySync:
         loop = asyncio.get_event_loop()
 
         singer.write_schema(stream, schema.to_dict(), ["service_id", "start_time"])
-        start = get_bookmark(self.state, stream, "from")
-        result = await loop.run_in_executor(None, self.client.stats, start)
+        bookmark = get_bookmark(self.state, stream, "from")
+        if bookmark is not None:
+            start_date = pendulum.parse(bookmark).int_timestamp
+        else:
+            start_date = pendulum.parse(self._config['start_date']).int_timestamp
+        end_date = pendulum.now().int_timestamp
+        result = await loop.run_in_executor(None, self.client.stats, start_date, end_date)
         if result:
             for n in result['data']:
                 service_result = await loop.run_in_executor(None, self.client.service, n)
