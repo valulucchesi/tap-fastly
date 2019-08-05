@@ -15,9 +15,9 @@ setup(
             "pendulum"
       ],
       entry_points="""
-    [console_scripts]
-    tap-fastly=tap_fastly:main
-    """,
+      [console_scripts]
+      tap-fastly=tap_fastly:main
+      """,
       packages=["tap_fastly"],
       package_data = {
             "schemas": ["tap_fastly/schemas/*.json"]

@@ -68,7 +68,7 @@ def get_selected_streams(catalog):
 def create_sync_tasks(config, state, catalog):
     auth = FastlyAuthentication(config["api_token"])
     client = FastlyClient(auth)
-    sync = FastlySync(client, state)
+    sync = FastlySync(client, state, config)
 
     selected_stream_ids = get_selected_streams(catalog)
 
