@@ -1,0 +1,6 @@
+[
+  "tests/test_fastly.py::MyGreatClassTestCase::test_events",
+  "tests/test_fastly.py::MyGreatClassTestCase::test_projects",
+  "tests/test_fastly.py::MyGreatClassTestCase::test_sync_events",
+  "tests/test_fastly.py::MyGreatClassTestCase::test_sync_stats"
+]
