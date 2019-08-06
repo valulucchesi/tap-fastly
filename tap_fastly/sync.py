@@ -118,6 +118,7 @@ class FastlySync:
         singer.write_schema(stream, schema.to_dict(), ["service_id", "start_time"])
         bookmark = get_bookmark(self.state, stream, "from")
         if bookmark is not None:
+            bookmark = "2019-08-06T14:43:20"
             start_date = pendulum.parse(bookmark).int_timestamp
         else:
             start_date = pendulum.parse(self._config['start_date']).int_timestamp
