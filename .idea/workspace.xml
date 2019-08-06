@@ -18,8 +18,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tap_fastly/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            <state relative-caret-position="51">
+              <caret line="84" column="27" lean-forward="true" selection-start-line="84" selection-start-column="27" selection-end-line="84" selection-end-column="27" />
+              <folding>
+                <element signature="e#23#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_PLUGINS_DIR$/python-ce/helpers/typeshed/stdlib/3/asyncio/events.pyi">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -28,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+              <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -36,8 +48,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tap_fastly/sync.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="120" column="47" selection-start-line="120" selection-start-column="47" selection-end-line="120" selection-end-column="47" />
+            <state relative-caret-position="390">
+              <caret line="139" column="80" lean-forward="true" selection-start-line="139" selection-start-column="80" selection-end-line="139" selection-end-column="80" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -75,7 +87,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/events.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
+            <state relative-caret-position="359">
               <caret line="100" selection-start-line="100" selection-end-line="100" />
             </state>
           </provider>
@@ -132,6 +144,8 @@
       <find>line</find>
       <find>invoice_id</find>
       <find>&quot;invoice_id</find>
+      <find>datetime.d</find>
+      <find>pendulum</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,6 +184,11 @@
             <path>
               <item name="tap-fastly" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="tap-fastly" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="tap-fastly" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="tap-fastly" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="tap_fastly" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -212,7 +231,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tap_fastly/__init__.py" />
-      <option name="PARAMETERS" value="-c $USER_HOME$/analytics/config-fastly.json --catalog $PROJECT_DIR$/../automation-data-warehouse/fastly-properties.json -s $USER_HOME$/analytics/fastlystate.json" />
+      <option name="PARAMETERS" value="-c $USER_HOME$/analytics/config-fastly.json --catalog $PROJECT_DIR$/../automation-data-warehouse/fastly-properties.json" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -305,7 +324,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4560185" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2824074" />
       <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.375" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -332,58 +351,53 @@
           <line>513</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tap_fastly/sync.py</url>
-          <line>122</line>
-          <option name="timeStamp" value="83" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>pendulum.parse(bookmark).int_timestamp</expression-string>
+        <expression-string>datetime.datetime.strptime(result['meta'][&quot;to&quot;], '%Y-%m-%d %H:%M:%S UTC').isoformat()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>pendulum.parse(&quot;[&quot;+bookmark+&quot;]&quot;).int_timestamp</expression-string>
+        <expression-string>datetime.datetime.strptime(result['meta'][&quot;to&quot;], '%Y-%m-%d %H:%M:%S UTC')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>result['meta']['to']</expression-string>
+        <expression-string>datetime.datetime.strptime(result['meta'][&quot;to&quot;], '%Y-%m-%d %H:%M:%S')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>result['meta']</expression-string>
+        <expression-string>datetime.datetime.strptime(result['meta'][&quot;to&quot;])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>result</expression-string>
+        <expression-string>result['meta'][&quot;to&quot;]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>result['total']['extras']</expression-string>
+        <expression-string>datetime.datetime.strptime(result[&quot;end_time&quot;], &quot;%Y-%m-%dT%H:%M:%SZ&quot;).isoformat()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>json.dumps(result[&quot;line_items&quot;])</expression-string>
+        <expression-string>datetime.datetime.strptime(result[&quot;end_time&quot;], &quot;%Y-%m-%dT%H:%M:%SZ&quot;)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>result[&quot;line_items&quot;]</expression-string>
+        <expression-string>&quot;start_time&quot;</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>service_result['customer_id']</expression-string>
+        <expression-string>result[&quot;end_time&quot;]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -526,23 +540,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tap_fastly/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.7/site-packages/pendulum/parsing/parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="334" selection-start-line="334" selection-end-line="334" />
         </state>
       </provider>
     </entry>
     <entry file="file:///usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/events.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
+        <state relative-caret-position="359">
           <caret line="100" selection-start-line="100" selection-end-line="100" />
         </state>
       </provider>
@@ -554,17 +568,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python3.7/site-packages/pendulum/parsing/parser.py">
+    <entry file="file://$APPLICATION_PLUGINS_DIR$/python-ce/helpers/typeshed/stdlib/3/asyncio/events.pyi">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
-          <caret line="334" selection-start-line="334" selection-end-line="334" />
+          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tap_fastly/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="84" column="27" lean-forward="true" selection-start-line="84" selection-start-column="27" selection-end-line="84" selection-end-column="27" />
+          <folding>
+            <element signature="e#23#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tap_fastly/sync.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="120" column="47" selection-start-line="120" selection-start-column="47" selection-end-line="120" selection-end-column="47" />
+        <state relative-caret-position="390">
+          <caret line="139" column="80" lean-forward="true" selection-start-line="139" selection-start-column="80" selection-end-line="139" selection-end-column="80" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

@@ -9,7 +9,8 @@ import singer
 import requests
 import pendulum
 from singer.bookmarks import write_bookmark, get_bookmark
-from pendulum import datetime, period
+from pendulum import  period
+import datetime
 
 
 class FastlyAuthentication(requests.auth.AuthBase):
@@ -96,8 +97,6 @@ class FastlySync:
         if not period:
             # build a default period from the last bookmark
             bookmark = get_bookmark(self.state, stream, "start_time")
-            bookmark = bookmark.replace("[","")
-            bookmark = bookmark.replace("]","")
             start = pendulum.parse(bookmark)
             end = pendulum.now()
             period = pendulum.period(start, end)
@@ -108,7 +107,8 @@ class FastlySync:
             result = await loop.run_in_executor(None, self.client.bill, at)
             if result:
                 singer.write_record(stream, result)
-                self.state = write_bookmark(self.state, stream, "start_time", result["end_time"])
+                end = datetime.datetime.strptime(result["end_time"], "%Y-%m-%dT%H:%M:%SZ").isoformat()
+                self.state = write_bookmark(self.state, stream, "start_time", end)
 
     async def sync_stats(self, schema, period:pendulum.period = None):
         """Output the stats in the period."""
@@ -118,8 +118,6 @@ class FastlySync:
         singer.write_schema(stream, schema.to_dict(), ["service_id", "start_time"])
         bookmark = get_bookmark(self.state, stream, "from")
         if bookmark is not None:
-            bookmark = "2019-06-20 14:43:24 UTC"
-            #bookmark = bookmark.replace("]","")
             start_date = pendulum.parse(bookmark).int_timestamp
         else:
             start_date = pendulum.parse(self._config['start_date']).int_timestamp
@@ -138,4 +136,5 @@ class FastlySync:
                     i['service_updated_at'] = service_result['updated_at']
                     i['service_created_at'] = service_result['created_at']
                     singer.write_record(stream, i)
-                    self.state = write_bookmark(self.state, stream, "from", result['meta']["to"])
+                    end = datetime.datetime.strptime(result['meta']["to"], '%Y-%m-%d %H:%M:%S UTC').isoformat()
+                    self.state = write_bookmark(self.state, stream, "from", end)
