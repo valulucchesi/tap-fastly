@@ -48,8 +48,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tap_fastly/sync.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="120" column="96" selection-start-line="120" selection-start-column="96" selection-end-line="120" selection-end-column="96" />
+            <state relative-caret-position="154">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -146,6 +146,7 @@
       <find>&quot;invoice_id</find>
       <find>datetime.d</find>
       <find>pendulum</find>
+      <find>utc</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -231,7 +232,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tap_fastly/__init__.py" />
-      <option name="PARAMETERS" value="-c $USER_HOME$/analytics/config-fastly.json --catalog $PROJECT_DIR$/../automation-data-warehouse/fastly-properties.json" />
+      <option name="PARAMETERS" value="-c $USER_HOME$/analytics/config-fastly.json --catalog $PROJECT_DIR$/../automation-data-warehouse/fastly-properties.json -s $USER_HOME$/analytics/fastlystate.json" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -313,7 +314,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="952" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4944238" visible="true" weight="0.2899878" />
       <window_info id="Structure" order="1" sideWeight="0.5055762" side_tool="true" weight="0.2899878" />
@@ -324,7 +324,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2824074" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28139535" />
       <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.37441862" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -353,8 +353,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tap_fastly/sync.py</url>
-          <line>140</line>
+          <line>141</line>
           <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tap_fastly/sync.py</url>
+          <line>110</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tap_fastly/sync.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="92" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -592,8 +602,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tap_fastly/sync.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="120" column="96" selection-start-line="120" selection-start-column="96" selection-end-line="120" selection-end-column="96" />
+        <state relative-caret-position="154">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

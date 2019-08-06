@@ -118,7 +118,8 @@ class FastlySync:
         singer.write_schema(stream, schema.to_dict(), ["service_id", "start_time"])
         bookmark = get_bookmark(self.state, stream, "from")
         if bookmark is not None:
-            bookmark = datetime.datetime.strptime(bookmark, '%Y-%m-%d %H:%M:%S UTC').isoformat()
+            if "UTC" in bookmark:
+                bookmark = datetime.datetime.strptime(bookmark, '%Y-%m-%d %H:%M:%S UTC').isoformat()
             start_date = pendulum.parse(bookmark).int_timestamp
         else:
             start_date = pendulum.parse(self._config['start_date']).int_timestamp
