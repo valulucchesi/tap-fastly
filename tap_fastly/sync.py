@@ -95,7 +95,10 @@ class FastlySync:
 
         if not period:
             # build a default period from the last bookmark
-            start = pendulum.parse(get_bookmark(self.state, stream, "start_time"))
+            bookmark = get_bookmark(self.state, stream, "start_time")
+            bookmark = bookmark.replace("[","")
+            bookmark = bookmark.replace("]","")
+            start = pendulum.parse(bookmark)
             end = pendulum.now()
             period = pendulum.period(start, end)
 
@@ -115,6 +118,8 @@ class FastlySync:
         singer.write_schema(stream, schema.to_dict(), ["service_id", "start_time"])
         bookmark = get_bookmark(self.state, stream, "from")
         if bookmark is not None:
+            bookmark = bookmark.replace("[", "")
+            bookmark = bookmark.replace("]","")
             start_date = pendulum.parse(bookmark).int_timestamp
         else:
             start_date = pendulum.parse(self._config['start_date']).int_timestamp
